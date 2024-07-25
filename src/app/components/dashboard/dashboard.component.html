@@ -1,0 +1,64 @@
+<main class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 mb-4">
+            <table class="w-100" mat-table [dataSource]="entregaMotoristas">
+                <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef> Nome </th>
+                <td mat-cell *matCellDef="let row"> {{row.nome}} </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="entregues">
+                <th class="text-center" mat-header-cell *matHeaderCellDef> Entregas </th>
+                <td class="text-center" mat-cell *matCellDef="let row"> {{row.entregues}} </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="saiuEntrega">
+                <th class="text-center" mat-header-cell *matHeaderCellDef> Saiu para entrega </th>
+                <td class="text-center" mat-cell *matCellDef="let row"> {{row.saiuEntrega}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table> 
+        </div>
+        <div class="col-lg-6 col-md-12 mb-4">
+            <table class="w-100" mat-table [dataSource]="entregaMotoristas">
+                <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef> Nome </th>
+                <td mat-cell *matCellDef="let row"> {{row.nome}} </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="insucessos">
+                <th class="text-center" mat-header-cell *matHeaderCellDef> Insucessos </th>
+                <td class="text-center" mat-cell *matCellDef="let row"> {{row.insucessos}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsInsucesso"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsInsucesso;"></tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="w-100" mat-table [dataSource]="entregaBairro">
+                <ng-container matColumnDef="bairro">
+                <th mat-header-cell *matHeaderCellDef> Nome </th>
+                <td mat-cell *matCellDef="let row"> {{row.bairro}} </td>
+                </ng-container>
+                
+                <ng-container matColumnDef="entregues">
+                <th class="text-center" mat-header-cell *matHeaderCellDef> Entregas </th>
+                <td class="text-center" mat-cell *matCellDef="let row"> {{row.entregues}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="saiuEntrega">
+                <th class="text-center" mat-header-cell *matHeaderCellDef> Saiu para entrega </th>
+                <td class="text-center" mat-cell *matCellDef="let row"> {{row.saiuEntrega}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumnsbairros"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnsbairros;"></tr>
+            </table>
+        </div>
+    </div>    
+</main>

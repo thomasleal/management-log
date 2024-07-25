@@ -1,0 +1,26 @@
+.container {
+    padding: 40px;
+}
+
+td, th {
+    width: 33%;
+}
+
+table {
+    border: 1px solid #D0E0E3;
+    background-color: #FFFFFF;
+    tr th {
+        background-color: #F6F9F9;
+        border-bottom: 1px solid #D0E0E3;
+    }
+
+    th, td {
+        border: none;
+    }
+
+    tr:nth-child(even) {
+        background-color: #F6F9F9;
+        border-top: 1px solid #D0E0E3;
+        border-bottom: 1px solid #D0E0E3;
+    }
+}

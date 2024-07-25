@@ -1,0 +1,11 @@
+.example-container {
+    width: auto;
+    height: calc(100% - 64px);
+    background: #ffffff;
+}
+
+mat-drawer {
+    border-radius: unset;
+    background-color: #f4f4f4;
+    width: 260px;
+}

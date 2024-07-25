@@ -1,0 +1,36 @@
+.container {
+    padding: 40px;
+}
+
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+}
+
+mat-form-field {
+    height: 76px;
+}
+
+
+table {
+    border: 1px solid #D0E0E3;
+    background-color: #FFFFFF;
+    tr th {
+        background-color: #F6F9F9;
+        border-bottom: 1px solid #D0E0E3;
+    }
+
+    th, td {
+        border: none;
+    }
+
+    tr:nth-child(even) {
+        background-color: #F6F9F9;
+        border-top: 1px solid #D0E0E3;
+        border-bottom: 1px solid #D0E0E3;
+    }
+}
+
+mat-paginator {
+    background-color: #F6F9F9;
+}

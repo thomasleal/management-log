@@ -1,0 +1,64 @@
+<main class="container">
+    <mat-form-field>
+        <mat-label>Motorista</mat-label>
+        <input matInput [(ngModel)]="motorista" (keyup)="applyFilter()" placeholder="Buscar motorista" #input>
+    </mat-form-field>
+
+    <mat-form-field class="mx-4">
+        <mat-label>Status</mat-label>
+        <mat-select [(ngModel)]="status" (selectionChange)="applyFilter()">
+          <mat-option value=""></mat-option>
+          @for (status of statusList; track status) {
+            <mat-option [value]="status">{{ status }}</mat-option>
+          }
+        </mat-select>
+    </mat-form-field>
+      
+    <div>
+        <table mat-table [dataSource]="dataSource">
+          <!-- ID Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+          </ng-container>
+      
+          <!-- Progress Column -->
+          <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef> Motorista </th>
+            <td mat-cell *matCellDef="let row"> {{row.motorista.nome}} </td>
+          </ng-container>
+      
+          <!-- Name Column -->
+          <ng-container matColumnDef="documento">
+            <th mat-header-cell *matHeaderCellDef> Documento </th>
+            <td mat-cell *matCellDef="let row"> {{row.documento}} </td>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let row"> {{row.status_entrega}} </td>
+          </ng-container>
+      
+          <!-- Fruit Column -->
+          <ng-container matColumnDef="origem">
+            <th mat-header-cell *matHeaderCellDef> Origem </th>
+            <td mat-cell *matCellDef="let row"> {{row.cliente_destino.nome}} - {{formatarEndereco(row.cliente_destino)}} </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="destino">
+            <th mat-header-cell *matHeaderCellDef> Destino </th>
+            <td mat-cell *matCellDef="let row"> {{row.cliente_destino.nome}} - {{formatarEndereco(row.cliente_destino)}} </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">Nenhum resultado encontrado com "{{input.value}}"</td>
+          </tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[10]" aria-label="Selecione página de entregas"></mat-paginator>
+    </div>
+</main>

@@ -1,0 +1,8 @@
+<ul class="menu-list mt-5">
+   <li *ngFor="let menu of menus" class="mb-4">
+       <a routerLink="{{ menu.router }}" routerLinkActive="active" ariaCurrentWhenActive="page" class="d-flex">
+            <mat-icon [fontIcon]="menu.icon" class="mx-2"></mat-icon>
+            {{ menu.name }}
+        </a>
+    </li> 
+</ul>
