@@ -1,27 +1,42 @@
-# ManagementLog
+# ManagementLog 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+##ESPECIFICAÇÕES
 
-## Development server
+NODE V22.5.1
+ANGULAR CLI V18.1.1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+##INSTALAÇÃO
 
-## Code scaffolding
+```bash
+$ git clone https://github.com/thomasleal/management-log.git 
+$ npm install
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- `git clone https://github.com/thomasleal/management-log.git` -> Irá clonar o projeto
+- `npm install` -> Irá instalar todas as dependências do projeto
 
-## Build
+##RODAR O PROJETO
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+$ npm start
+```
 
-## Running unit tests
+- `npm start` -> Irá rodar o projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##RODAR TESTES UNITÁRIOS
 
-## Running end-to-end tests
+```bash
+$ npm run test
+$ npm run test:coverage
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `npm run test` -> Irá rodar todos os testes unitários e exibir no terminal os resultados
 
-## Further help
+<img width="821" alt="image" src="https://github.com/user-attachments/assets/9205d063-8bae-445c-a027-250a0fd708a0">
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+- `npm run test:coverage` -> Irá rodar todos os testes unitários e exibir o nível de coberturas
+
+<img width="648" alt="image" src="https://github.com/user-attachments/assets/50158c4a-3d2f-4a90-9fe3-53ace0e81557">
+
