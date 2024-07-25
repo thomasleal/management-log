@@ -4,5 +4,6 @@ import { DeliveriesComponent } from './components/deliveries/deliveries.componen
 
 export const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
-    { path: 'deliveries', component: DeliveriesComponent }
+    { path: 'deliveries', component: DeliveriesComponent },
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full'}
 ];
